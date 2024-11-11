@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cover{
+    width: 100vw;  /* 100% chiều rộng của cửa sổ */
+    height: 100%; /* 100% chiều cao của cửa sổ */
+    background-color: #fffde8;
+    padding: 80px 460px;
+}
+.main,.relate{
+    font-family: "Roboto", sans-serif;
+  /* font-weight: 100; */
+    font-style: normal;
+}
+.main{
+    background-color: white;
+    /* margin: 80px 500px; */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px gray;
+}
+.image img{
+    width: 100%;
+    height: 500px;
+    border-radius: 40px;
+}
+.content{
+    margin-top: 32px;
+    line-height: 32px;
+}
+.content h1{
+    color: #5278ae;
+}
+.price_content{
+    color: rgb(39, 180, 39);
+}
+.evaluate{
+    margin-bottom: 12px ;
+}
+.commit span{
+    background: rgba(237, 234, 234, 0.94);
+    padding: 8px;
+    border-radius: 8px;
+    margin-right: 30px;
+    line-height: 40px;
+}
+.commit i{
+    margin-right: 10px;
+}
+.content .cart button{
+    background: #f15a42;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 16px;;
+    /* font-size: 12px; */
+}
+.content .cart i{
+    margin-right: 8px;
+}
+h3{
+    font-weight: bold;
+    /* font-size: 25px; */
+    padding-bottom: 10px;
+}
+.detail_information, .sub_information, .featured, .user_manual, .special_features, .share, .comment{
+    margin-top: 20px;
+    /* line-height: 35px; */
+}
+.detail_information ul{
+    margin-left: 20px;
+    line-height: 25px;
+}
+.featured{
+    line-height: 30px;
+}
+.featured h3{
+    color: rgb(51, 152, 215);
+}
+.featured ul{
+    list-style: none;
+   
+}
+.icon-container{
+    color: aliceblue;
+    font-size: 15px;
+    background-color: rgb(51, 152, 215);
+    border-radius: 100%;
+    padding: 2px;
+    margin-right: 10px;
+}
+.user_manual{
+    line-height: 30px;
+}
+.user_manual h3{
+    color: #d7902d;
+}
+.user_manual ul{
+    list-style: none;
+    /* line-height: 30px; */
+}
+.user_manual ul i{
+    margin-right: 10px;
+}
+.special_features{
+    line-height: 30px;
+}
+.special_features h3{
+    color: #ff623b;
+}
+.special_features ul{
+    list-style: none;
+}
+.special_features ul i{
+    margin-right: 10px;
+}
+.button-content button{
+    padding: 7px;
+    border-radius: 4px;
+    margin-right: 5px;
+    color: white;
+}
+.button-content_face button{
+    background-color: blue;
+}
+.button-content_twitter button{
+    background-color: rgb(90, 172, 231);
+}
+.button-content_instagram button{
+    background-color: rgb(255, 0, 234);
+}
+.button-content i{
+    margin-right: 5px;
+}
+.comment textarea{
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    padding: 8px;
+}
+.comment button{
+    background-color: #3a9be0;
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    /* font-size: 16px; */
+}
+.relate{
+    margin-top: 20px;
+}
+.relate .product_relate{
+    padding-top: 20px;
+    font-size: 20px;
+    position: relative;
+}
+.relate .product_relate img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+.relate .product_relate p{
+    display: inline-block;
+}
+.relate .product_relate .name_product_relate,.price{
+    position: absolute;
+    top: 48px;
+    /* font-weight: bold; */
+}
+
+.relate .product_relate .price {
+    /* left: calc(720px);          Dịch chuyển .price sang phải 100px */
+    left: 720px;
+    font-weight: bold;
+    color: rgb(39, 180, 39);
+
+}
