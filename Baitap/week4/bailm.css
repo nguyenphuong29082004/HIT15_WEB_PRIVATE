@@ -123,6 +123,7 @@ h3{
     border-radius: 4px;
     margin-right: 5px;
     color: white;
+    margin-top: 8px;
 }
 .button-content_face button{
     background-color: blue;
@@ -138,7 +139,7 @@ h3{
 }
 .comment textarea{
     width: 100%;
-    height: 100px;
+    height: 140px;
     margin-top: 20px;
     padding: 8px;
 }
@@ -156,28 +157,25 @@ h3{
 }
 .relate .product_relate{
     padding-top: 20px;
-    font-size: 20px;
-    position: relative;
+    font-size: 18px;
+    height: 100px;
+    font-weight: 500;
+    /* position: relative; */
 }
 .relate .product_relate img{
     width: 80px;
     height: 80px;
     margin-right: 20px;
     border-radius: 4px;
+    float: left;
 }
-.relate .product_relate p{
-    display: inline-block;
+.name_product_relate{
+    float: left;
+    padding-top: 30px;
+    /* position: absolute; */
 }
-.relate .product_relate .name_product_relate,.price{
-    position: absolute;
-    top: 48px;
-    /* font-weight: bold; */
-}
-
-.relate .product_relate .price {
-    /* left: calc(720px);          Dịch chuyển .price sang phải 100px */
-    left: 540px;
-    font-weight: bold;
+.product_relate_price{
+    float: right;
     color: rgb(39, 180, 39);
-
+    padding-top: 30px;
 }
