@@ -55,6 +55,7 @@
     padding: 10px;
     border-radius: 10px;
     margin-top: 16px;;
+    border: none;
     /* font-size: 12px; */
 }
 .content .cart i{
@@ -118,6 +119,7 @@ h3{
 }
 .button-content button{
     padding: 7px;
+    border: none;
     border-radius: 4px;
     margin-right: 5px;
     color: white;
@@ -146,6 +148,7 @@ h3{
     padding: 12px;
     border-radius: 4px;
     margin-top: 15px;
+    border: none;
     /* font-size: 16px; */
 }
 .relate{
