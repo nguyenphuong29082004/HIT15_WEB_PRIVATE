@@ -160,7 +160,6 @@ h3{
     font-size: 18px;
     height: 100px;
     font-weight: 500;
-    /* position: relative; */
 }
 .relate .product_relate img{
     width: 80px;
@@ -172,7 +171,6 @@ h3{
 .name_product_relate{
     float: left;
     padding-top: 30px;
-    /* position: absolute; */
 }
 .product_relate_price{
     float: right;
