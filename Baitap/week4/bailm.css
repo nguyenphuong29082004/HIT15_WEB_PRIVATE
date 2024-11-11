@@ -176,7 +176,7 @@ h3{
 
 .relate .product_relate .price {
     /* left: calc(720px);          Dịch chuyển .price sang phải 100px */
-    left: 720px;
+    left: 540px;
     font-weight: bold;
     color: rgb(39, 180, 39);
 
