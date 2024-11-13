@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    background-color: #fbf9e2;;
+    padding: 40px 60px;
+}
+
+.menu input{
+    border: 1px solid orange;
+    border-radius: 8px;
+    width: 800px;
+    height: 40px;
+    padding: 10px;
+    outline: none;
+}
+.menu ul{
+    list-style: none;
+    margin-left: 150px;
+}
+.menu ul li{
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 24px;
+    padding: 10px 20px;
+}
+.menu ul li:hover{
+    color: orange;
+    background-color: yellow;
+    border-radius: 8px;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub_content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+    
+}
+.sub_content img{
+    width: 50%;
+    object-fit: cover;
+    margin-right: 32px;
+    border-radius: 32px;
+}
+.sub_content div{
+    width: 50%;
+}
+.sub_content h1{
+    font-size: 50px;
+}
+.content_banner h1, p{
+    text-align: end;
+    margin: 10px 0;
+}
+.content_banner p{
+    font-size: 24px;
+}
+.content_banner div{
+    text-align: end;
+    width: 100%;
+}
+.content_banner button{
+    padding: 10px 20px ;
+    background-color: yellow;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.main_content{
+    margin-top: 48px;
+}
+.title{
+    text-align: center;
+    padding: 10px 20px;
+    background-color: yellow;
+    border-radius: 12px;
+    margin: 48px 0;
+}
+.main_content {
+
+   display: flex;
+   justify-content: space-between;
+
+    
+}.main_content .content {
+    width: 30%;
+}
+.main_content .content img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.main_content .content p{
+    text-align: center;
+    padding: 10px 20px;
+    background-color: yellow;
+    border-radius: 8px;
+    font-weight: 700;
+}
