@@ -42,7 +42,7 @@ html{
 }
 .banner input{
     padding: 16px;
-    border-radius: 16px;
+    border-radius: 32px;
     outline: none;
     width: 40% ;
     border: 0;
@@ -52,6 +52,7 @@ html{
 }
 .banner input::placeholder {
     color: #e5539e;
+    padding-left: 16px;
 }
 .content {
     /* display: flex; */
