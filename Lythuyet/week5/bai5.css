@@ -71,6 +71,7 @@
     background-color: yellow;
     border-radius: 8px;
     font-size: 16px;
+    outline: none;
 }
 
 .main_content{
