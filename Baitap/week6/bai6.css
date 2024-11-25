@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.overall{
+    padding-left: 153px;
+    /* margin-top: 30px; */
+    padding-top: 30px;
+    padding-right: 160px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between
+}
+
+.sub-menu ul{
+    display: flex;
+    list-style: none;
+}
+.sub-menu ul li{
+    margin-left: 38px;
+    width: 68px;
+    height: 24px;
+    padding-top: 13px;
+}
+.sub-menu ul li a{
+    text-decoration: none;
+    color: #635F85;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+ button{
+    width: 127px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    border: none;
+}
+.menu .button-man1 .button-login{
+    border: solid 2px #E7E7E7;
+    color: #F5830B;
+}
+    
+.menu .button-man1 .button-sign-up{
+    color: #FFFFFF;
+    background-image: linear-gradient(to right, #F67102, #F4A91E); 
+    margin-left: 18px;
+}
+
+ .content-left{
+    width: 560px;
+    height: 366px;
+    margin-top: 104px;
+}
+ .content-left .title{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #FF7D01;
+    padding-bottom: 18px;
+}
+.content-left h1{
+    font-weight: 700;
+    font-size: 50px;
+    /* line-height: 56px; */
+    color: #051441;
+    /* padding-bottom: 25px; */
+}
+ .content-left .description{
+    padding-top: 25px;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 30px;
+    color: #5D677E;
+    padding-bottom: 50px;
+    text-align: justify;
+}
+.content-left .button-sign-up{
+    background-image: linear-gradient(to right, #F67102, #F4A91E); 
+    color: #E7E7E7;
+}
+
+.button-man1_1{
+    background-image: linear-gradient(to right, #F67102, #F4A91E); 
+    color: #E7E7E7;
+}
+.star-logo .box {
+    width: 59px; 
+    height: 59px; 
+    background-color: #FFFFFF; 
+    box-shadow: 17px 0px 25px 0 #8C8D921F;
+    border-radius: 30px; 
+    position: relative; 
+} 
+
+.content-left_sub a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #101D48;
+}
+.content-left_sub {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+.content-right{
+    padding-top: 330px;
+   margin-left: 150px;
+}
+
+.content-right .backgroud-image {
+    transform: skew(2deg, 4deg);
+    position: relative;
+    height: 420px;
+    width: 628px;
+    margin-top: -190px;
+    margin-left: -158px;
+    border-radius: 30px 10% 30px; 
+    background: linear-gradient(to right, #4991E5, #365DE6, #724AE5);
+    /* border: 0px solid; */
+    border-radius: 120% 8% 8% 100% / 20% 10% 10% 20% ;
+}
+.content-right .img-human1 img {
+    position: absolute;
+    width: 560px;
+    height: 545px;
+    top: 127px;
+    right: 165px;    
+}
+.content-right .icon-man1 .abstract{
+    width: 300px;
+    height: 220px;
+    position: absolute;
+}
+.content-right .icon-man1 .rectangle1_1{
+    top: 280px;
+    left:45%;
+}
+.content-right .icon-man1 .rectangle1_2{
+    top: 200px;
+    left: 80%;
+}
+.content-right .icon-man1 .rectangle1_3{
+    top: 430px;
+    left: 80%;
+    z-index: 1;
+}
+.content-right .icon-man1 .rectangle2_1{
+    position: absolute;
+    top: 520px;
+    left: 48%;
+    z-index: 1;
+}
+.content-right .icon-man1 .rectangle2_2{
+    position: absolute;
+    top: 570px;
+    left: 60%;
+    z-index: 1;
+}
+.content-right .icon-man1 .group7{
+    position: absolute;
+    top: 490px;
+    left: 72%;
+    z-index: 1;
+}
+.content-right .icon-man1 .Instagram{
+    position: absolute;
+    top: 360px;
+    left: 80%;
+    z-index: 1;
+}
+.content-right .icon-man1 div{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f9f6f3;
+    border-radius: 15px;
+    z-index: 1;
+}
+.content-right .icon-man1 .circle1{
+    top: 470px;
+    left: 58%;
+}
+.content-right .icon-man1 .circle2{
+    top: 290px;
+    left: 80%;
+}
+.content-right .icon-man1 .circle3{
+    top: 580px;
+    left: 87%;
+}
+.content, .content_man2, .content_man3, .content_man4 {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.content_man2 .content-right .backgroud-image{
+    position: relative;
+    width: 536px;
+    top: 20px;
+    transform: skew(2deg, 4deg);
+}
+.content_man2 .content-right .img-human2{
+    position: absolute;
+    top: -47px;
+    left: 110px;
+    transform: rotate(4deg);
+    z-index: 1;
+}
+.content_man2 .content-right .img-human2 img {
+    transform: scaleX(1.2);
+}
+.content_man2 .content-right .backgroud-image .like{
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+.content_man2 .content-right .backgroud-image .love{
+    position: absolute;
+    top: 145px;
+    right: -85px;
+}
+.content_man2 .content-right .backgroud-image .follower{
+    position: absolute;
+    top: 250px;
+    right: -85px;
+}
+.content_man2 .content-right .backgroud-image .vector4{
+    position: absolute;
+    top: 75px;
+    left: 52px;
+}
+.content_man2 .content-right .backgroud-image .vector5{
+    position: absolute;
+    top: 375px;
+    right: 35px;
+}
+.content_man2 .content-right .backgroud-image .vector6{
+    position: absolute;
+    top: 368px;
+    right: 28px;
+}
+.content_man2 .content-right .backgroud-image .abstract_man2{
+    position:absolute;
+    top: 125px;
+    left: -150px;
+}
+.content_man2 .content-right .backgroud-image .icon-man2 .thanh div{
+    width: 150px;
+    height: 12px;
+    border-radius: 15px;
+}
+.content_man2 .content-right .backgroud-image .icon-man2  .thanh .thanh1_1{
+    position: absolute;
+    top: 109px;
+    right: 117px;
+    background-color: #FFFFFF;
+    transform: rotate(129deg);
+}
+.content_man2 .content-right .backgroud-image .icon-man2  .thanh .thanh1_2{
+    position: absolute;
+    top: 113px;
+    right: 111px;
+    transform: rotate(129deg);
+    background-color: #FF466B;
+}
+.content_man2 .content-right .backgroud-image .icon-man2  .thanh .thanh1_3{
+    position: absolute;
+    bottom: 189px;
+    left: 61px;
+    background-color: #E7E7E7;
+    transform: rotate(-48deg);
+}
+.content_man2 .content-right .backgroud-image .icon-man2  .thanh .thanh1_4{
+    position: absolute;
+    bottom: 183px;
+    left: 66px;
+    transform: rotate(-48deg);
+    background-color: #F4A31B;
+}
+.content_man2 .content-right .backgroud-image .icon-man2 .circle .circle4,.circle5,.circle6{
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    position: absolute;
+}
+.content_man2 .content-right .backgroud-image .icon-man2 .circle .circle7,.circle8{
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    position: absolute;
+}
+.content_man2 .content-right .backgroud-image .icon-man2 .circle .circle4{
+    bottom: 90px;
+    left: 55px;
+}
+.content_man2 .content-right .backgroud-image .icon-man2 .circle .circle5{
+    top: 200px;
+    right: 80px;
+}
+.content_man2 .content-right .backgroud-image .icon-man2 .circle .circle6{
+    top: 150px;
+    left: 80px;
+}
+.content_man2 .content-right .backgroud-image .icon-man2 .circle .circle7{
+    top: 72px;
+    left: 100px;
+}
+.content_man2 .content-right .backgroud-image .icon-man2 .circle .circle8{
+    top: 30px;
+    right: 80px;
+}
+.content_man3 .content-right .backgroud-image{
+    position: relative;
+    width: 450px;
+    height: 400px;
+    top: 20px;
+    /* transform: skew(2deg, 6deg); */
+}
+.content_man3 .content-right .img-human3 img {
+    position: absolute;
+    width: 400px;
+    transform: rotate(4deg);
+    bottom: 11px;
+    right:20px;
+}
+.content_man3 .content-right .backgroud-image .card{
+    position: absolute;
+    top: -200px;
+    left: -390px;
+}
+.content_man3 .content-right .backgroud-image .card1{
+    position: absolute;
+    top: 110px;
+    left: -240px;
+    width: 280px;
+}
+.content_man3 .content-right .backgroud-image .card2{
+    position: absolute;
+    bottom: -90px;
+    left: 80px;
+    width: 280px;
+}
+
+.content_man4 .content-right .backgroud-image4{
+    position: relative;
+    width: 480px;
+    height: 400px;
+    top: 20px;
+    background-color: #F4F6FD;
+    margin-left: -160px;
+    margin-top: -200px;
+    transform: skew(2deg, 6deg);
+    border-radius: 120% 8% 8% 100% / 20% 10% 10% 20% ;
+
+}
+
+.content_man4 .content-right .danhgia1{
+    position: absolute;
+    bottom: -1380px;
+    left: 130px;
+}
+.content_man4 .content-right .danhgia2{
+    position: absolute;
+    bottom: -1550px;
+    left: 380px;
+}
+.content_man4 .content-right .danhgia3{
+    position: absolute;
+    bottom: -1620px;
+    left: 130px;
+}
+.content_man4 .content-left .description{
+    padding-bottom: 20px;
+}
+.content_man4 .content-left .text .text1{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #F4A11A;
+    padding-right: 20px;
+}
+.content_man4 .content-left button{
+    margin-top: 20px;
+}
+.content_man4 .content-left .anhtron{
+    position: relative;
+}
+.content_man4 .content-left .anhtich{
+    position: absolute;
+    bottom: -1365px;
+    right: 703px;
+}
