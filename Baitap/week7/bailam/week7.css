@@ -41,6 +41,7 @@
         position: relative;
         display: inline-block;
     }
+    
     .content h1::after {
         content: '';
         display: block;
