@@ -1,0 +1,11 @@
+@import "fonts.css";
+
+:root {
+    --color-primary: #f46827;
+    /* --color-secondary: #79462d;
+    --color-tertiary: #79481e;
+    --color-four: #835e4c;
+    --text-color: #130d0d; */
+    --text-font: "Be Vietnam Pro",sans-serif;
+
+}
