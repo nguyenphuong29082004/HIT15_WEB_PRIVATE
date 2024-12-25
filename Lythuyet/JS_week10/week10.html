@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str ="Hello";
+        str[0] = 'a';
+        console.log(str);
+        
+        let array =[ 1,2,3];
+        array[0] = 10;
+        console.log(array);
+
+        let person = {name: "P", age:10};
+        console.log(person);
+
+        console.log("So sanh");
+        let arr1= [1,2,3];
+        let arr2=[1,2,3];
+        let arr3=arr1;
+        console.log(arr1 == arr2); 
+        console.log(arr1==arr3);
+        
+        // Kiem tra kieu du lieu
+        console.log("Kiem tra kieu du lieu");
+        let name = "Alice";
+        console.log(typeof name); // string
+        let age = 20;
+        console.log(typeof age);
+
+        // var str1="Hello";
+        // var str1="World";
+        // console.log(str1);
+
+        // Khai bao voi let
+        let str1 = "Hello";
+        let str2 = "World";
+        console.log(str1);
+
+        // khai bao voi const
+        const str3 ="Hi";
+        console.log(str3);
+        
+        // Hosting
+        console.log(a); // underfine
+        var a = 5;  
+/*
+        console.log(a); // bao loi
+        let a = 5;
+*/
+        // Scope
+        //  Khi khai bao var trong if thi ben ngoai if van dung duoc
+        //  Nhung doi voi let thi fail
+        console.log("Scope")
+        function test(){
+            let a1 =10;
+        if(true){
+            // let a1 =10;
+            console.log(a1);
+        }
+            // console.log(a1); 
+           // neu dung o ngoai thi fail
+        }test();
+
+        //  Chuoi
+        let str5 ="Hello";
+        let str6 = 'World';
+        let str7= '"Phuong"';
+        let str8="\"Phuong\" "
+        let tmp = str5+" "+str6;
+        console.log(tmp);
+        console.log(str7);
+        console.log(str8);
+
+        console.log("So chieu dai cua Hello")
+        console.log(str5.length);
+        console.log(str5[0]);
+
+        // Viet hoa tat ca
+        
+        console.log(str7.toUpperCase());
+        console.log(str7.toLowerCase());
+        
+        let a3 = 10;
+        let str9 = `a = ${a3} la gia tri nguyen`;
+        console.log(str9);
+        
+        console.log(` ${a > a3}`);   
+
+        let str10 = "5";
+        let num = 5;
+        console.log(str10);
+        console.log(num);
+
+
+        //  Bien doi kieu du lieu tu string sang number
+        // +str
+        // Number(str) 
+        // parseInt(str)
+        // parseFloat(str)
+        console.log(+str10); 
+
+        //  De bien doi number sang string thi can + them ki tu rong
+        console.log(num+"");
+        console.log(`${num}`);
+
+        // So sang ===
+        console.log(str10 == num); //true // js tu dong chuyen tu str sang number va nguoc lai 
+        console.log(str10 === num); // false
+        
+        let numbers = [1, 2, 3, 4, 5];
+        let sum = 0;
+            for (let num of numbers) {
+                console.log(num);
+                sum+=num;
+            }
+        console.log(sum);
+
+        let name1 = prompt("Ten ban la gi?","P");
+        console.log(name1);
+
+        alert(`toi ten la ${name1}`)
+
+    </script>
+</body>
+</html>

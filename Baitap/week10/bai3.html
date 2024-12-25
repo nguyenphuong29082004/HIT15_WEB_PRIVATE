@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        let n = 6; // Chiều cao của cây thông 
+        console.log("Vẽ cây thông Noel:\n"); 
+        // Vẽ phần thân cây thông 
+        for (let i = 1; i <= n; i++) {
+            let line = ""; 
+            for (let j = 1; j <= n - i; j++) {
+                line += " "; 
+            } 
+            // Số lượng sao sẽ là i*2 + 1 trên một dòngdòng
+            for (let j = 1; j <= i * 2 - 1; j++) {
+                line += "*"; 
+            } 
+            console.log(line); 
+        } 
+
+        // Vẽ phần chân
+        let line3 = " ".repeat(5) + "*";
+        console.log(line3);
+        console.log(line3);
+        let line4 = " ".repeat(4) + "***";
+        console.log(line4);
+       
+        
+    </script>
+</body>
+</html>
+

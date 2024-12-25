@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = prompt("Nhập số cần kiểm tra cách nhau bằng dấu phẩy");
+        let number1 = number.split(",");
+        let sum = 0;
+        let max = number1[0];
+        let min = number1[0];
+        for (let i = 0; i < number1.length; i++){
+            if (number1[i] % 2 == 0){
+                sum++;
+            }
+            if (number1[i] > max) {
+                max = number1[i];
+            }
+            if (number1[i] < min) {
+                min = number1[i];
+            }
+        }
+        alert(`Số lớn nhất: ${max} \n Số nhỏ nhất: ${min} \n Tống số chẵn: ${sum}`);
+
+    </script>
+</body>
+</html>
