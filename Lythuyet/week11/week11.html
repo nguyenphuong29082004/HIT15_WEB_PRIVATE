@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+         <h1 class="title" id="first-title">First Title</h1>
+        <h1 class="title" id="first-title">Second Title</h1>
+        <h1 class="title" id="third-title">Third Title</h1>
+        <h1></h1>
+    </div>
+   
+    
+    <script>
+
+        //  chu uy khi su dung querySelector methods thi nó chỉ hiện thị lên phần tử đầu tiêntiên
+        // let firstTitle = document.querySelector("h1"); // select the first available h1 element
+        // console.log(firstTitle)
+        // let secondtitle = document.querySelector("#first-title"); // select id with first-title
+        // console.log(secondtitle)
+        // let thirdTitle = document.querySelector(".title");
+        // console.log(thirdTitle)
+
+        // console.log([firstTitle])
+
+        // để lấy tất cả thì sử dung querySelectorAll methods
+        let firstTitle1 = document.querySelectorAll("h1")
+        console.log(firstTitle1);
+        for (let i =0; i< firstTitle1.length; i++){
+            console.log(firstTitle1[i]);
+        }
+
+
+        // ADDING ATTRIBUTE
+
+        // .setAttibute
+        // const titles = document.querySelectorAll("h1"); // lay ra tat ca h1
+        // titles[3].setAttribute("class", "title");   // gán class là title
+        // titles[3].setAttribute("id", "fourth-title"); // gán id là ...
+
+        //
+        // const titles2 = document.querySelectorAll("h1"); // lay ra tat ca h1
+        // titles2[3].className = "Title";
+        // titles2[3].id = "fourth-title";
+
+        // CLASS LIST
+        //
+        const titles3 = document.querySelectorAll("h1");
+        titles3[3].classList.add("title", "header-title", "classes-test");   // cai h1 thu ba hien len ba class
+        //remove class
+        titles3[3].classList.remove("title", "header-title");
+
+        // const image = document.querySelector('img');
+        // image.src = "";
+
+        // gan noi dung cho titles3
+        titles3[3].textContent = "Fourth Title";
+
+
+        // thay doi content cua lop container
+        // const container1 = document.querySelector(".container");
+        // container1.textContent = "Container";
+
+
+        // thay doi mau chu cua title thu hai la thanh phan thu hai trong (0,1,2,...)
+        const title4 = document.querySelectorAll("h1")   // ra mot mang
+        title4[1].style.color = "red";
+        title4[1].style.background = "blue";
+        title4[1].style.fontSize = "24px";
+
+        
+        
+
+    </script>
+</body>
+</html>

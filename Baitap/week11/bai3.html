@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai3_week11</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            font-family:sans-serif;
+            align-items: center;
+        }
+        #cover{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        h1{
+            margin-top: 20px;
+        }
+        label{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        input{
+            border: none;
+            background-color: #e8f0fd;
+            padding: 12px;
+            width: 300px;
+            outline: none;
+        }
+        tr td:nth-child(2){
+            background-color: #e8f0fd;
+        }
+        button{
+            width: 80px;
+            height: 40px;
+            background-color: rgb(204, 201, 201);
+            margin-right: 10px;
+            border: none;
+        }
+        button:hover{
+            background-color: #f26b24;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="cover">
+    <h1>Vẽ hĩnh v1.0</h1>
+    <table border="1" cellpadding="0" cellspacing="0"  >
+        <tr>
+            <td><label for="cr">Chiều rộng</label></td>
+            <td><input type="text" name="cr" id="cr"></td>
+        </tr>
+        <tr>
+            <td><label for="cc">Chiều cao</label></td>
+            <td><input type="text" name="cc" id="cc"></td>
+        </tr>
+        <tr>
+            <td><label for="pa">Padding</label></td>
+            <td><input type="text" name="pa" id="pa"></td>
+        </tr>
+        <tr>
+            <td><label for="ma">Margin</label></td>
+            <td><input type="text" name="ma" id="ma"></td>
+        </tr>
+        <tr>
+            <td><label for="mn">Màu nền(Hex, gba, rgba)</label></td>
+            <td><input type="text" name="mn" id="mn"></td>
+        </tr>
+        <tr>
+            <td><label for="hn">Hình nền (đường link online)</label></td>
+            <td><input type="text" name="hn" id="hn"></td>
+        </tr>
+        <tr>
+            <td><label for="mc">Màu chữ</label></td>
+            <td><input type="text" name="mc" id="mc"></td>
+        </tr>
+        <tr>
+            <td><label for="nd">Nội dung nhỏ</label></td>
+            <td><input type="text" name="nd" id="nd"></td>
+        </tr>
+    </table>
+        <div class="btn">
+            <button class="btn1">Vẽ hình</button>
+            <button class="btn2">Reset</button>
+        </div>
+        <div id="shape">Xin chào</div>
+    </div>
+
+    <script>
+        const cr = document.querySelector("#cr");
+        const cc = document.querySelector("#cc");
+        const pa = document.querySelector("#pa");
+        const ma = document.querySelector("#ma");
+        const mn = document.querySelector("#mn");
+        const hn = document.querySelector("#hn");
+        const mc = document.querySelector("#mc");
+        const nd = document.querySelector("#nd");
+        const btn1 = document.querySelector(".btn1");
+        const btn2 = document.querySelector(".btn2");
+        // const bandau = document.querySelector("#shape");
+        // bandau.style.width = "150px";
+        // bandau.style.height = "50px";
+        // bandau.style.backgroundColor = "#75ba75"
+        // bandau.style.display = "flex";
+        // bandau.style.alignItems = "center";
+        // bandau.style.justifyContent = "center";
+        const taothe = document.querySelector("#shape");
+        btn1.addEventListener("click", function taohinhve() {
+            // container.innerHTML = '';
+            event.preventDefault();
+           
+            // const taothe = document.createElement("div");
+            taothe.innerHTML = nd.value || "Nội dung trống";
+            taothe.style.width = cr.value || "150px";
+            taothe.style.height = cc.value || "50px";
+            taothe.style.padding = pa.value || "0";
+            taothe.style.margin = ma.value || "0";
+            taothe.style.backgroundColor = mn.value || "rgb(16, 175, 122)";
+            taothe.style.backgroundImage = hn.value ? `url(${hn.value})` : "none";
+            taothe.style.color = mc.value || "#000";
+            taothe.style.backgroundRepeat = "no-repeat";
+            taothe.style.backgroundSize = "contain";
+            taothe.style.backgroundPosition = "center";
+        });
+        btn2.addEventListener("click", function () {
+            event.preventDefault();
+            cr.value = "";
+            cc.value = "";
+            pa.value = "";
+            ma.value = "";
+            mn.value = "";
+            hn.value = "";
+            mc.value = "";
+            nd.value = "";
+            shape.innerHTML = "Xin chào";
+            shape.style = "";
+        });
+
+    </script>
+</body>
+</html>

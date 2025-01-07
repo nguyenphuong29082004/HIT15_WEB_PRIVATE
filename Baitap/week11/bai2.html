@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            font-family:sans-serif;
+            align-items: center;
+        }
+        input{
+            width: 350px;
+            border: 2px solid #79d7bd;
+            outline: none;
+            padding: 8px;
+        }
+        button{
+            background-color: #79d7bd;
+            padding: 8px;
+            width: 80px;
+            color: white;
+            border: none;
+        }
+        .thongke{
+            display: flex;
+            flex-direction: row;
+            width: 430px;
+            justify-content: space-between;
+        }
+        .container {
+            width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(9, 100px);
+            /* background-color: blue; */
+            gap: 8px;
+        }
+        .container div {
+            height: 50px;
+            color: white;
+            display: flex; /* Sử dụng Flexbox để dễ dàng căn chỉnh */
+            align-items: center; /* Căn giữa theo chiều dọc */ 
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sinh số tự động</h1>
+    <div>
+        <input type="text" name="nhap" id="nhap">
+        <button id="tao">Tạo</button>
+    </div>
+    <div class="thongke">
+        <p>Số chẵn: <span class="even"></span> </p>
+        <p>Số lẻ: <span class="old"></span></p>
+        <p>Số nguyên tố: <span class="prime"></span> </p>
+    </div>
+    <div class="container"></div>
+    <script> 
+        const nhap =document.querySelector("#nhap");
+        const tao = document.querySelector("#tao");
+        const even = document.querySelector(".even");
+        const old = document.querySelector(".old");
+        const prime = document.querySelector(".prime");
+        const container = document.querySelector(".container");
+        function isEvent(num) {
+            return num % 2 == 0
+            // ==0 thi return ve true con lai thi bang false
+        }
+        function isOld(num) {
+            return num % 2 != 0
+        }
+        function isPrime(number) {
+            if (number < 2) {
+                return false
+            }
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        tao.addEventListener("click", function sinhso() {
+            container.innerHTML = '';
+            event.preventDefault();
+            const nhapvalue = parseFloat(nhap.value);
+            let tongeven = 0;
+            let tongold = 0;
+            let tongprime = 0;
+            console.log(nhapvalue);
+            for (let i =0; i < nhapvalue; i++){
+                const num = document.createElement("div");   // thiet lap div trong container
+                if (isPrime(i)){
+                    tongprime++;
+                    num.style.backgroundColor = "#fc5e53";
+                }
+                else if(isEvent(i)){
+                    num.style.backgroundColor ="#79d7bd";
+                }
+                else{
+                    num.style.backgroundColor = "#fddb3a";
+                }
+                num.innerHTML = i;  // thiet lap noi dung cho the div
+                container.appendChild(num); // them phan tu <div> vao container
+            }
+            for (let i = 0; i < nhapvalue; i++){
+                if (isEvent(i)) tongeven++;
+                else{
+                    tongold++;
+                }
+            }
+            even.innerHTML = tongeven;
+            old.innerHTML = tongold;
+            prime.innerHTML = tongprime;
+        })
+
+    </script>
+
+
+</body>
+
+</html>

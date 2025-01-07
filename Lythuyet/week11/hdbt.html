@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            /* background-color: blue; */
+            gap: 8px;
+        }
+        .container div{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        // Lay ra cha
+        const container = document.querySelector(".container");
+        // console.log(container)
+
+        // khai bao bien 
+        let numbers = 100;
+
+
+        function isEvent(num){
+            return num %2 == 0
+            // ==0 thi return ve true con lai thi bang false
+        }
+        function isOld(num) {
+            return num % 2 != 0
+        }
+        function isPrime(number) {
+            if (number < 2){
+                return false
+            }
+            for (let i = 2; i <= Math.sqrt(number); i++){
+                if (number % i === 0){
+                    return false;
+                } 
+            }
+            return true;
+        }
+        for (let i =0; i < numbers; i++){
+            const num = document.createElement("div");
+            if (isPrime(i)){
+                num.style.backgroundColor = "red";
+            }
+            else if(isEvent(i)){
+                num.style.backgroundColor ="blue"
+            }
+            else{
+                num.style.backgroundColor = "yellow";
+            }
+            num.innerHTML = i;
+            container.appendChild(num);
+        }
+        
+    </script>
+</body>
+</html>

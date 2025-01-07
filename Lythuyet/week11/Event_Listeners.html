@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title" id="first-title">First Title</h1>
+        <h1 class="title" id="first-title">Second Title</h1>
+        <h1 class="title" id="third-title">Third Title</h1>
+        <h1></h1>
+        <!-- <input type="text"> -->
+        <!-- <button onclick="sumNumber">Click me 1: On click</button> -->
+        <!-- <button class="btn_listener">Click me 2: listener even</button> -->
+        <button>Click me 2: listener even</button>
+        <br>
+        <input type="text" name="" id="height" placeholder="height">
+        <input type="text" name="" id="weight" placeholder="weight">
+        <button class="IBM">Caculate IBM</button>
+
+        <h1>Key events: Press any kye</h1>
+
+    </div>
+    <script>
+        const btn = document.querySelector("button");  // Lay nut button
+        
+        function sumNumber(num1, num2, e){
+                console.log(e);
+                alert(num1+num2);
+            }
+        // const result = sumNumber(4, 5);
+        // console.log(result);
+
+        // demo addEventListener    
+        // btn.addEventListener("click",function alertMsg(e){
+        //     alert(e.target);
+        // })
+
+        const height = document.querySelector("#height");
+        const weight = document.querySelector("#weight");
+        const cIBM = document.querySelector(".IBM");
+         
+        cIBM.addEventListener("click", function caculateIBM(){
+            const heightInMeters = height.value / 100; 
+            const bmi = weight.value / (heightInMeters * heightInMeters); 
+            alert(`BMI của bạn là: ${bmi.toFixed(2)}`);
+        })
+
+    //    document.body.addEventListener("keydown",(e) => {
+    //     alert(`${e.key} - ${e.keyCode}`);
+    //    });
+    </script>
+</body>
+</html>

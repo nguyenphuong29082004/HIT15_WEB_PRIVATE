@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document Object Model:30 Days Of JavaScript</title>
+   <style>
+    div{
+        width: 250px;
+        height: 150px;
+        background-color: blueviolet;
+    }
+   </style>
+</head>
+
+<body>
+    <div> </div>
+    <button> Tao </button>
+    <script>
+        const tao = document.querySelector("button");
+        tao.addEventListener("click", function caculateIBM(){
+            const d = document.querySelector("div");
+            //    d.style.backgroundColor = "red";
+               d.style.width = "320px";
+               d.style.height = "320px";
+               d.innerHTML = "Anh phuong";
+               d.style.color = "blue";
+                d.style.backgroundImage = "url('https://tomau.vn/wp-content/uploads/tranh-to-mau-anime-cute-chat-luong-cao.jpg')";               
+                d.style.backgroundSize = "cover";
+                 d.style.backgroundPosition = "center";
+                //console.log(d);
+        })
+      
+        
+
+    </script>
+</body>
+
+</html>

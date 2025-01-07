@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai4_week11</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        margin-top: 50px;
+        background-color: #f3e5c0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        font-family:sans-serif;
+        align-items: center;
+    }
+    input{
+        width: 350px;
+        border: 2px solid #f5dd99;
+        outline: none;
+        padding: 8px;
+    }
+    button{
+        background-color: #26717e;
+        padding: 8px;
+        width: 80px;
+        color: white;
+        border: none;
+    }
+    .thongke{
+        display: flex;
+        flex-direction: row;
+        width: 430px;
+        justify-content: space-between;
+    }
+    </style>
+</head>
+<body>
+    <h1>Kiểm tra chính tả v1.0</h1>
+    <div>
+        <input type="text" name="nhap" id="nhap">
+        <button id="tao">Add</button>
+    </div>
+    <div class="thongke">
+        <p>Số ký tự đúng: <span class="even"></span> </p>
+        <p>Số ký tự sai: <span class="old"></span></p>
+    </div>
+    <div class="container">
+        <h2></h2>
+        <div class="content"></div>
+    </div>
+    
+    <script>
+        const button = document.querySelector("#tao");
+        const nhap = document.querySelector("#nhap");
+        button.addEventListener("click", () => {
+            const nhap1 = nhap.value;
+            for (let i = 0; i < nhap1.length; i++) { 
+                console.log(nhap1[i]); 
+            }
+        });
+        
+    </script>
+
+</body>
+</html>

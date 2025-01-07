@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model:30 Days Of JavaScript</title>
+</head>
+</html>
+<body>
+    <!-- <ul></ul> -->
+    <script>
+
+        //Creating an Element
+        // let title = document.createElement("h1");  //the h1
+        // title.className = "title"; // set attribute
+        // title.style.fontSize = "24px";
+        // title.textContent = "Creating HTML element DOM Day 2";  // gan noi dung
+        // console.log(title);
+
+        // Creating Elements
+        // let title;
+        // for (let i = 0; i < 3; i++) {
+        //     title = document.createElement("h1");
+        //     title.className = "title";
+        //     title.style.fontSize = "24px";
+        //     title.textContent = i;
+        //     // console.log(title);
+        //     document.body.appendChild(title); // appendChild them dan vao, ghi de len
+        // }
+
+        let ul = document.createElement("ul"); // tao ra mot ul
+        let li;  // title2 = li
+        for (let i = 0; i < 3 ; i++){
+            li = document.createElement("li");
+            li.className = "item";
+            li.textContent= "item" + (i+1);
+            li.style.fontSize = "32px";
+            li.style.color = "green";
+            ul.appendChild(li);
+        }
+        document.body.appendChild(ul);
+        let u = document.querySelector('ul li:last-child');  // lay phan tu trong ul cua li cuoi
+        console.log(u);
+        ul.removeChild(u);
+        
+        // 
+
+    </script>
+</body>
+
+</html>
