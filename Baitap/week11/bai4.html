@@ -38,33 +38,95 @@
         width: 430px;
         justify-content: space-between;
     }
+    .content{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    h3{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
     </style>
 </head>
 <body>
     <h1>Kiểm tra chính tả v1.0</h1>
     <div>
-        <input type="text" name="nhap" id="nhap">
+        <input type="text" name="nhap" id="nhap" placeholder="Nhap mot tu tieng anh">
         <button id="tao">Add</button>
     </div>
     <div class="thongke">
-        <p>Số ký tự đúng: <span class="even"></span> </p>
-        <p>Số ký tự sai: <span class="old"></span></p>
+        <p>Số ký tự đúng: <span class="tr"></span> </p>
+        <p>Số ký tự sai: <span class="fa"></span></p>
     </div>
-    <div class="container">
-        <h2></h2>
+    <div class="container" >
+        <h3></h3>
         <div class="content"></div>
     </div>
     
     <script>
         const button = document.querySelector("#tao");
         const nhap = document.querySelector("#nhap");
+        const content1 = document.querySelector(".content");
+        const h3 = document.querySelector("h3");
+        let nhap1 ="";
+        let contentArray = [];
+        // const container = document.querySelector(".container");
         button.addEventListener("click", () => {
-            const nhap1 = nhap.value;
+            content1.innerHTML = '';
+            contentArray = []; // Đặt lại contentArray tại đây
+            nhap1 = nhap.value;
             for (let i = 0; i < nhap1.length; i++) { 
-                console.log(nhap1[i]); 
+                content = document.createElement("div");
+                content.style.width = "80px";
+                content.style.height = "100px";
+                content.style.borderRadius = "20px";
+                content.style.backgroundColor = "#fd8a51";
+                content.style.display = "flex";
+                content.style.flexDirection = "row";
+                content.style.alignItems = "center";
+                content.style.justifyContent = "center";
+                content.style.color = "black";
+                content.style.marginRight ="10px";
+                content.style.marginBottom = "10px";
+                content.innerHTML = nhap1[i];
+                console.log(nhap1[i]);
+                contentArray.push(content);
+                content1.appendChild(content);
             }
         });
-        
+    console.log(contentArray);
+
+    nhap.addEventListener("input", () => {
+        let nhap2 = nhap.value; 
+        let ktdung = 0;
+        let ktsai = 0;
+        for (let i = 0; i < nhap1.length; i++) {
+            if (nhap2[i] == nhap1[i]) {
+                console.log(contentArray[i].style.backgroundColor);
+                contentArray[i].style.backgroundColor = "#78d8bc"; // xanh lá cây
+                ktdung++; 
+            } 
+            else { 
+                contentArray[i].style.backgroundColor = "#fc5e53"; // đỏ 
+                ktsai++;
+            } 
+        } 
+        document.querySelector(".tr").innerText = ktdung; 
+        document.querySelector(".fa").innerText = ktsai;
+        if (nhap2.length === nhap1.length) {
+            if (ktdung == nhap1.length){
+            h3.innerHTML = "Đúng chính tả"
+            }
+            else{
+                h3.innerHTML="Sai chính tả";
+            }
+        }else{
+            h3.innerHTML = "";
+        }
+    });
+
+
     </script>
 
 </body>
