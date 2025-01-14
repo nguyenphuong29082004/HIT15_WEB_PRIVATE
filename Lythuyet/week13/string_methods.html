@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week13_string_methodsmethods</title>
+</head>
+<body>
+    <script>
+        const text = "JavaScript is fun";
+        console.log(text.slice(0, 10)); // "JavaScript"  Từ 0 đến 10 nhưng ko lấy stt 1010
+        console.log(text.slice(11)); // "is fun"
+        console.log(text.slice(-3)); // "fun" (chỉ số âm tính từ cuối chuỗi)
+
+        console.log(text.substring(0, 4)); // "Java"
+
+        console.log(text.includes("Java")); // true
+        console.log(text.includes("script")); // false (phân biệt chữ hoa/chữ thường)
+        console.log(text.includes("Java", 5)); // false (bắt đầu tìm từ chỉ số 5)
+
+        console.log(text.indexOf("Script")); // 4 -- Trả về chỉ số của lần xuất hiện đầu tiên của một chuỗi con.
+        console.log(text.indexOf("Java", 5)); // -1 (bắt đầu tìm từ chỉ số 5)
+
+        console.log(text.replace("JavaScript", "Python")); // "I love Python"
+
+        console.log(text.charAt(0)); // "J" -- Trả về ký tự tại vị trí chỉ định trong chuỗi.
+
+        console.log(text.at(-2)); // "u" -- Trả về ký tự tại vị trí chỉ định trong chuỗi tính từ cuối chuỗi lên bắt đầu bằng -1
+    
+
+        
+
+        const text1 = "apple,banana,cherry";
+        console.log(text1.split(",")); // ["apple", "banana", "cherry"]
+        console.log(text1.split(",", 2)); // ["apple", "banana"]
+        console.log(text1.split("")); // ["a", "p", "p", "l", "e",..]
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai1_week13</title>
+    <style>
+        body{
+            background-color: #1f1e2e;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sub-div{
+            background-color: rgb(45, 44, 84);
+            width: max-content;
+            border-radius: 15px;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+        }
+        input{
+            background-color: #1e272e;
+            width: 95%;
+            outline: none;
+            border:3px solid #454d99; 
+            padding: 18px;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+        }
+        input:focus{
+             background-color: #1e272e;
+        }
+        button{
+            background-color: #09e884;
+            font-weight:300;
+            padding: 12px;
+            border-radius: 5px;
+            width: 80px;
+            font-size: 20px;
+            border: none;
+        }
+        .name{
+            color: #efdc78;
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        .result{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .show_again{
+            display:  flex;
+            flex-direction: row;
+        }
+        .notification{
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="sub-div">
+            <p class = "name">Palindrome Checker v1.0</p>
+            <input type="text" name="input" id="input" placeholder="Enter a string...">
+            <button>Check</button> 
+            <div class="result">
+                <p class="notification"></p>
+                <div class="show_again"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const input = document.querySelector("#input");
+        const check = document.querySelector("button");
+        const notification = document.querySelector(".notification");
+        const show_again = document.querySelector(".show_again");
+        check.addEventListener("click",() => {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của nút bấm 
+            let input2 = input.value; 
+            show_again.innerHTML = '';
+            if (input2.trim() === ""){
+                notification.innerHTML = "Hãy nhập đúng chuỗi ký tự";
+                return;
+            }
+            input2 = input2.replace(/\s+/g, "-"); 
+            input.value = input2; // Cập nhật giá trị input để hiển thị chuỗi mới
+            // let kt = 0;
+            // value lấy giá trị
+            // split chuyển chuỗi thàng mảng
+            // reverse chuyển đổi thứ tự trong mảng => mảng đảo ngược
+            const input3 = input2.split("").reverse().join("");
+            for (let i = 0; i < input2.length; i++) {
+                const div = document.createElement("div");
+                div.style.width = "40px";
+                div.style.height = "44px";
+                div.style.borderRadius = "8px";
+                div.style.backgroundColor = "#fa4530";
+                div.style.display = "flex";
+                div.style.flexDirection = "row";
+                div.style.alignItems = "center";
+                div.style.justifyContent = "center"; 
+                div.style.fontWeight = "bold" 
+                div.style.margin = "4px";
+                div.style.fontSize = "24px";
+                div.innerHTML = input2[i];
+                if (input2[i] === input3[i]){
+                    div.style.backgroundColor = "#0be97a";
+                }  
+                show_again.appendChild(div);
+            }
+            // console.log((input2.length) / 2)
+            if (input2 === input3){ 
+                notification.innerHTML = "Đây là palindrome!"; 
+            } 
+            else{ 
+                notification.innerHTML = "Đây không phải là palindrome!"; 
+            }
+            
+        })
+       
+    </script>
+</body>
+
+</html>

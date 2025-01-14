@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2_week13</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sub-div{
+            background-color: white;
+            /* width: max-content; */
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+            box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.3);
+        }
+        .name{
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .information input{
+            padding: 16px;
+            border: 1px solid rgb(220, 212, 212);
+            width: 400px;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+        .information button{
+            padding: 16px;
+            background-color: #35a94d;
+            color: white;
+            border-radius: 4px;
+            font-size: 18px;
+            border: none;
+        }
+        .result{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sub-div">
+        <p class="name">To-Do List v1.0</p>
+        <div class="information">
+            <input type="text" name="input" id="input" placeholder="Nhập nhiệm vụ mới ở đây">
+            <button class="add">Add</button>
+        </div>
+        <div class="result">
+        </div>
+    </div>
+    <script>
+        const input = document.querySelector("#input");
+        const add = document.querySelector(".add");
+        const mission = document.querySelector(".result");
+       
+        add.addEventListener("click",()=>{
+            const input2 = input.value; 
+            if (input2.trim() === "") { 
+                return; 
+            }
+            let mission_array = [];
+            mission_array.push(input2);
+            input.value = "";
+            console.log(mission_array);
+            for (let i = 0; i < mission_array.length; i++){
+                const div = document.createElement("div");
+                div.style.padding = "8px";
+                div.style.display = "flex";
+                div.style.flexDirection = "row";
+                div.style.justifyContent = "space-between";
+                div.style.alignItems = "center";
+                div.style.border = "1px solid rgb(188, 185, 185)";
+                div.style.borderRadius = "4px";
+                div.style.marginBottom = "4px";
+                const p = document.createElement("p");
+                p.style.fontSize = "20px";
+                p.innerHTML = mission_array[i];
+                div.appendChild(p);
+
+                const div_button = document.createElement("div");
+                div_button.style.display = "flex";
+                const button = document.createElement("button");
+                button.innerHTML = "Delete";
+                button.style.backgroundColor = "red";
+                button.style.color = "white";
+                button.style.borderRadius = "4px";
+                button.style.border = "none";
+                button.style.padding = "12px";
+                button.style.fontSize = "16px";
+                const button_fix = document.createElement("button");
+                button_fix.innerHTML = "Edit";
+                button_fix.style.backgroundColor = "orange";
+                button_fix.style.marginLeft = "5px";
+                button_fix.style.color = "white";
+                button_fix.style.borderRadius = "4px";
+                button_fix.style.padding = "12px";
+                button_fix.style.fontSize ="16px";
+                button_fix.style.border = "none";
+
+                div_button.appendChild(button);
+                div_button.appendChild(button_fix)
+
+                
+                div.appendChild(div_button);
+                // console.log(div);
+                mission.appendChild(div);
+
+                button.addEventListener("click", () => {
+                    div.remove(); // Xóa phần tử div khỏi tài liệu });
+                })
+
+                let isEditing = false;
+
+                button_fix.addEventListener("click", () => {
+                    if (!isEditing) {
+                        const input_edit = document.createElement("input");
+                        input_edit.style.width = "75%";
+                        input_edit.style.border = "none";
+                        input_edit.style.fontSize = "16px";
+                        input_edit.style.outline = "none";
+                        input_edit.value = p.innerHTML;
+
+                        div.replaceChild(input_edit, p);
+
+                        button_fix.innerHTML = "Save";
+                        button_fix.style.backgroundColor = "green";
+                        isEditing = true;
+                    } else {
+                        const input_edit = div.querySelector("input");
+                        p.innerHTML = input_edit.value;
+                        mission_array[i] = input_edit.value;
+
+                        div.replaceChild(p, input_edit);
+                        button_fix.innerHTML = "Edit";
+                        button_fix.style.backgroundColor = "orange";
+                        isEditing = false;
+                    }
+                });
+
+            }
+           
+        })
+    </script>
+</body>
+</html>
