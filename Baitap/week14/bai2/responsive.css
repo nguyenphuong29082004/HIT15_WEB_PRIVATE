@@ -1,0 +1,140 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    .wrpCategory {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .title {
+        width: 260px;
+    }
+    .detail_description {
+        color: #615c56;
+        font-size: 16px;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /* Dùng cho trình duyệt Webkit (Chrome, Safari, v.v.) */
+        -webkit-line-clamp: 4;
+        /* Giới hạn số dòng */
+        -webkit-box-orient: vertical;
+        /* Đặt chiều hướng của box */
+    }
+
+    /* .divProduct {
+        width: 90%;
+        height: 305px;
+    }
+    .wrpCategory {
+        display: grid;
+        grid-template-columns: repeat(4, 242px);
+        gap: 0;
+    }
+    .title {
+        width: 168px;
+    }
+    .img_div {
+        width: 60%;
+    } */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .wrpCategory {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .title {
+        width: 260px;
+    }
+    .img_div {
+        width: 38%;
+    }
+    .detail_description {
+        color: #615c56;
+        font-size: 16px;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /* Dùng cho trình duyệt Webkit (Chrome, Safari, v.v.) */
+        -webkit-line-clamp: 4;
+        /* Giới hạn số dòng */
+        -webkit-box-orient: vertical;
+        /* Đặt chiều hướng của box */
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .wrpCategory {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        gap: 15px;
+    }
+
+    .title {
+        width: 470px;
+    }
+    .img_div {
+        width: 25%;
+    }
+    .detail_title {
+        font-size: 20px;
+    }
+    .detail_description {
+        color: #615c56;
+        font-size: 16px;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /* Dùng cho trình duyệt Webkit (Chrome, Safari, v.v.) */
+        -webkit-line-clamp: 4;
+        /* Giới hạn số dòng */
+        -webkit-box-orient: vertical;
+        /* Đặt chiều hướng của box */
+    }
+    .detail_btn {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+    .wrpCategory {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .title {
+        width: 260px;
+    }
+    .img_div {
+        width: 30%;
+    }
+    .detail_title {
+        font-size: 16px;
+    }
+
+    .detail_description {
+        color: #615c56;
+        font-size: 16px;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /* Dùng cho trình duyệt Webkit (Chrome, Safari, v.v.) */
+        -webkit-line-clamp: 4;
+        /* Giới hạn số dòng */
+        -webkit-box-orient: vertical;
+        /* Đặt chiều hướng của box */
+    }
+
+    .detail_btn {
+        font-size: 14px;
+    }
+    .detail_img {
+        width: 100%;
+    }
+}

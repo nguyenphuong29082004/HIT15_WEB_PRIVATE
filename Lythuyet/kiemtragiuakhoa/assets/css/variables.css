@@ -1,11 +1,11 @@
 @import "fonts.css";
 
 :root {
-    --color-primary: #f46827;
-    /* --color-secondary: #79462d;
-    --color-tertiary: #79481e;
-    --color-four: #835e4c;
+    --color-primary: #1c1600;
+    --color-secondary: #ffca08;
+    --color-tertiary: #f0cd59;
+    /*--color-four: #835e4c;
     --text-color: #130d0d; */
-    --text-font: "Be Vietnam Pro",sans-serif;
+    --text-font-first:"Roboto", serif;
 
 }

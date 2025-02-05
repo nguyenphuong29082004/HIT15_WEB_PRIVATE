@@ -1,0 +1,120 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.Ex1 {
+    background-color: white;
+    padding: 20px;
+    width: max-content;
+    border-radius: 12px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.name {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.information textarea {
+    padding: 10px 10px;
+}
+
+.group {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 10px;
+
+    input {
+        padding: 10px;
+        border-radius: 4px;
+        outline: 0px;
+        border: 1px solid #d2d2d2;
+        /* opacity: 0.5; */
+    }
+
+    .btn_add {
+        background-color: #27a748;
+        padding: 0px 16px;
+        border-radius: 8px;
+        color: white;
+        border: none;
+    }
+}
+
+/* .error {
+     color: red;
+     margin: 20px;
+ } */
+
+.result {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.result_mission {
+    .wrp {
+        padding: 12px;
+        border: 1px solid #b7b1b1;
+        width: 950px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+        /*display: grid;
+                    grid-template-columns: 2fr 1fr;*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .wrp_p {
+            /* display: flex;*/
+            column-gap: 28px;
+            align-items: center;
+            column-gap: 28px;
+            display: grid;
+            grid-template-columns: repeat(3, 192px);
+            .div_time,
+            .div_tag {
+                display: flex;
+                column-gap: 10px;
+                align-items: center;
+            }
+
+            /* justify-content: space-around; */
+            .content_time {
+                width: 240px;
+            }
+
+            .tag {
+                width: 150px;
+            }
+        }
+
+        .wrp_btn {
+            width: 375px;
+            .btn_complete {
+                background-color: #007aff;
+            }
+
+            .btn_edit {
+                background-color: #fec107;
+            }
+
+            .btn_delete {
+                background-color: #ea2e46;
+            }
+        }
+
+        .wrp_btn button {
+            margin-left: 12px;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 8px;
+            border: none;
+        }
+    }
+}

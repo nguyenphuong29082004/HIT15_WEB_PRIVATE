@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greet(name) {
+            console.log(`Xin chào, ${name}!`);
+        }
+        greet();
+
+        function greet(name = "bạn") {
+        console.log(`Xin chào, ${name}!`);
+        }
+        greet(); // Output: Xin chào, bạn!
+        greet("Mai"); 
+
+
+        console.log("");
+        console.log("Rest Parameters");
+        function sum(...numbers) {
+        let total = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            total += numbers[i];
+        }
+        return total;
+        }
+        console.log(sum(1,2,3,4));
+
+        
+        console.log("");
+        console.log("Arrow functions");
+        const multiply = (x, y) => {
+        return x * y;
+        };
+        const multiply1 = (x,y) => x*y;
+        console.log(multiply(4,5));
+
+
+        console.log("");
+        console.log("Callback Function");
+        // khi kham bao 
+        // khi ham dong vai tro la mot doi so thi no la mot callback
+       
+        function myFunction(param) {
+        param("Khang");
+        } 
+        function myCallback(name) {
+        console.log(`Hello ${name}`);
+        }
+        myFunction(myCallback);
+
+        function dequy(n){
+            if ( n == 0 || n == 1) return 1;
+            else{
+                return n * dequy(n-1);
+            }
+        };
+        console.log(dequy(5));
+        
+ 
+    </script>
+</body>
+</html>

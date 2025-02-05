@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week14</title>
+</head>
+<body>
+    <script>
+        const courses = [
+            { id: 1, name: "Javascript", coin: 200 },
+            { id: 5, name: "Angular", coin: 500},
+            { id: 2, name: "HTML, CSS", coin: 0 },
+            { id: 3, name: "PHP", coin: 100 },
+            { id: 4, name: "Angular", coin: 0 },
+        ];
+        courses.forEach(function (course, index) {
+            console.log(index, course);
+        });
+
+
+        console.log("");
+        console.log("Every");
+        // course: currentValue
+        // chỉ cần 1 cái không thỏa mãn => false
+        // function là một callback
+        let isFree = courses.every(function (course, index) {
+            return course.coin === 0;
+        });
+        console.log(isFree)
+        
+        console.log("");
+        console.log("Some");
+        // course: currentValue
+        // chỉ cần 1 cái không thỏa mãn => false
+        let isFree_Some = courses.some(function (course, index) {
+            return course.coin === 0;
+        });
+        console.log(isFree_Some);
+
+        console.log("");
+        console.log("Find");
+        // tra ve phan tu dau tien thoa man dieu kien
+        var course = courses.find(function (course, index) {
+        return course.name === "Angular";
+        });
+        console.log(course);
+
+
+        console.log("");
+        console.log("Filter");
+        // filter tra về một mảng
+        // tra ve tất cả phần tử thoa man dieu kien
+        var course = courses.filter(function (course, index) {
+        return course.name === "Angular";
+        });
+        console.log(course);
+
+        // let newCourse = courses.map(function (course){
+        //     return{
+        //        id: course.id,
+        //        name: "Khóa học: "
+
+        //     }
+        // });
+
+        const numbers = [1,2,3,4,5];
+        const newnumbers =  numbers.map(function (number){
+            return number * 2;
+        });
+        console.log(newnumbers);
+
+        // let i = 0;
+        // function callback(){
+        //     console.log(i);
+        //     i++;
+        // }
+        // const total2 = courses.reduce(callback(),0);
+
+        let i = 0;
+        function callback (accumulator, currentValue){
+            console.log(i);
+            i++;
+            console.table({
+                "Luot chay: ": i,
+                "Luu tru: ": accumulator,
+                "Gia tien: ": currentValue.coin,
+                "Tong tien: ": accumulator + currentValue.coin,
+            })
+            return accumulator + currentValue.coin;
+            // gia tri return cua callback se tro thanh gia tri của accumulator cho vong lap tiep theo
+        }
+        const total2 = courses.reduce(callback,0);
+
+        // const arr = [1,2,3,4,5];
+        // const sum = arr.reduce((arr,value) => {
+        //     return arr * value;
+        // },1);
+        // console.log(sum);
+        
+        // function customSome(arr, mycallback){
+        //     for (let i  = 0; i <  arr.length; i++){
+        //          // currentvalue index arr
+        //         if (mycallback(arr[i], i, arr)) return true;
+        //     }
+        //     return false;
+        // }
+        // function myCallback (currentValue, index, originArray){
+        //     return currentValue % 2 == 0;
+        // }
+        // const result = customSome(arr,myCallback);
+        // console.log(result);
+
+       
+
+
+        const arr = [2,4,6,8,10];
+
+        function customEvery(arr, mycallback) {
+            for (let i  = 0; i <  arr.length; i++){
+                 // currentvalue index arr
+                if (mycallback(arr[i], i, arr))
+                    return false;
+            }
+                return true;
+        }
+        function myCallback (currentValue, index, originArray){
+            return currentValue % 2 !== 0;
+        }
+        const result = customEvery(arr,myCallback);
+        console.log(result);
+
+
+
+        function customFind(arr, mycallback) {
+            
+            for (let i = 0; i < arr.length; i++) {
+                // currentvalue index arr
+                if (mycallback(arr[i], i, arr))
+                    return arr[i];
+                }
+                return undefined;
+            }
+
+            function myCallback(currentValue, index, originArray) {
+                return currentValue % 2 === 0;
+            }
+            const result_find = customFind(arr, myCallback);
+            console.log(result_find);
+
+
+        function customFind(arr, mycallback) {
+            let value = [];
+            for (let i = 0; i < arr.length; i++) {
+                // currentvalue index arr
+                if (mycallback(arr[i], i, arr))
+                    value.push(arr[i]);
+            }
+            return value;
+        }
+
+        function myCallback(currentValue, index, originArray) {
+            return currentValue > 2;
+        }
+        const result_filter = customFind(arr, myCallback);
+        console.log(result_find);
+
+
+        
+
+    </script>
+</body>
+</html>
